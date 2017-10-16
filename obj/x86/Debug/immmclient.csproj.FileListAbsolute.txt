@@ -1,0 +1,13 @@
+E:\Temp\immm\immm\bin\Debug\immmclient.exe.config
+E:\Temp\immm\immm\bin\Debug\immmclient.exe
+E:\Temp\immm\immm\bin\Debug\immmclient.pdb
+E:\Temp\immm\immm\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Temp\immm\immm\obj\x86\Debug\immmclient.MainForm.resources
+E:\Temp\immm\immm\obj\x86\Debug\immmclient.Properties.Resources.resources
+E:\Temp\immm\immm\obj\x86\Debug\immmclient.WXWeb.resources
+E:\Temp\immm\immm\obj\x86\Debug\ResGen.read.1.tlog
+E:\Temp\immm\immm\obj\x86\Debug\ResGen.read.4.tlog
+E:\Temp\immm\immm\obj\x86\Debug\ResGen.write.1.tlog
+E:\Temp\immm\immm\obj\x86\Debug\ResGen.write.4.tlog
+E:\Temp\immm\immm\obj\x86\Debug\immmclient.exe
+E:\Temp\immm\immm\obj\x86\Debug\immmclient.pdb

@@ -1,0 +1,10 @@
+E:\Temp\immm\immm\bin\Debug\immm.exe.config
+E:\Temp\immm\immm\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Temp\immm\immm\obj\x86\Debug\immm.MainForm.resources
+E:\Temp\immm\immm\obj\x86\Debug\immm.Properties.Resources.resources
+E:\Temp\immm\immm\obj\x86\Debug\ResGen.read.1.tlog
+E:\Temp\immm\immm\obj\x86\Debug\ResGen.write.1.tlog
+E:\Temp\immm\immm\bin\Debug\immm.exe
+E:\Temp\immm\immm\bin\Debug\immm.pdb
+E:\Temp\immm\immm\obj\x86\Debug\immm.exe
+E:\Temp\immm\immm\obj\x86\Debug\immm.pdb

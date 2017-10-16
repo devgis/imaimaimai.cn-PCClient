@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCoupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="words" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageNo" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCouponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCouponResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCouponRS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="words" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageNo" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCouponRSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCouponRSResult" type="tns:ArrayOfTbkCouponDomain" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTbkCouponDomain">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TbkCouponDomain" nillable="true" type="tns:TbkCouponDomain" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TbkCouponDomain">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TopObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="category" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="commission_rate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="coupon_click_url" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="coupon_end_time" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="coupon_info" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="coupon_remain_count" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="coupon_start_time" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="coupon_total_count" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="item_description" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="item_url" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="num_iid" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="pict_url" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="seller_id" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="shop_title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="small_images" type="tns:ArrayOfString" />
+              <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="user_type" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="volume" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="zk_final_price" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TopObject" abstract="true" />
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTaoCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logourl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="infoText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaoCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaoCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemDetailResult" type="tns:ArrayOfNTbkItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNTbkItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NTbkItem" nillable="true" type="tns:NTbkItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NTbkItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TopObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="click_url" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="item_url" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="num_iid" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="pict_url" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="provcity" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="reserve_price" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="seller_id" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="shop_title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="small_images" type="tns:ArrayOfString" />
+              <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="tk_rate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="user_type" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="volume" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="zk_final_price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="zk_final_price_wap" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetItemDetailJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemDetailJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemDetailJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchCouponSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchCoupon" />
+  </wsdl:message>
+  <wsdl:message name="SearchCouponSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchCouponResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchCouponRSSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchCouponRS" />
+  </wsdl:message>
+  <wsdl:message name="SearchCouponRSSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchCouponRSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaoCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaoCode" />
+  </wsdl:message>
+  <wsdl:message name="GetTaoCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaoCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDetailJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemDetailJson" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDetailJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemDetailJsonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="immmSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">一个简单的测试端口</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCoupon">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">搜索优惠券返回json对象 words 关键字 pageNo 页数 PageSize 页大小</wsdl:documentation>
+      <wsdl:input message="tns:SearchCouponSoapIn" />
+      <wsdl:output message="tns:SearchCouponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCouponRS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">搜索优惠券返回List对象 words 关键字 pageNo 页数 PageSize 页大小</wsdl:documentation>
+      <wsdl:input message="tns:SearchCouponRSSoapIn" />
+      <wsdl:output message="tns:SearchCouponRSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaoCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">url 图片地址 信息内容获取淘口令</wsdl:documentation>
+      <wsdl:input message="tns:GetTaoCodeSoapIn" />
+      <wsdl:output message="tns:GetTaoCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据Ids [id1,id2,id3]获取产品明细List对象</wsdl:documentation>
+      <wsdl:input message="tns:GetItemDetailSoapIn" />
+      <wsdl:output message="tns:GetItemDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetailJson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据Ids [id1,id2,id3]获取产品明细的json对象</wsdl:documentation>
+      <wsdl:input message="tns:GetItemDetailJsonSoapIn" />
+      <wsdl:output message="tns:GetItemDetailJsonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="immmSoap" type="tns:immmSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCoupon">
+      <soap:operation soapAction="http://tempuri.org/SearchCoupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCouponRS">
+      <soap:operation soapAction="http://tempuri.org/SearchCouponRS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaoCode">
+      <soap:operation soapAction="http://tempuri.org/GetTaoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetail">
+      <soap:operation soapAction="http://tempuri.org/GetItemDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetailJson">
+      <soap:operation soapAction="http://tempuri.org/GetItemDetailJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="immmSoap12" type="tns:immmSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCoupon">
+      <soap12:operation soapAction="http://tempuri.org/SearchCoupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCouponRS">
+      <soap12:operation soapAction="http://tempuri.org/SearchCouponRS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaoCode">
+      <soap12:operation soapAction="http://tempuri.org/GetTaoCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetItemDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetailJson">
+      <soap12:operation soapAction="http://tempuri.org/GetItemDetailJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="immm">
+    <wsdl:port name="immmSoap" binding="tns:immmSoap">
+      <soap:address location="http://www.imaimaimai.cn/immm.asmx" />
+    </wsdl:port>
+    <wsdl:port name="immmSoap12" binding="tns:immmSoap12">
+      <soap12:address location="http://www.imaimaimai.cn/immm.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
